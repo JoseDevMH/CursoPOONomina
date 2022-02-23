@@ -2,8 +2,6 @@
 
 using POONomina;
 
-Console.WriteLine("Hello, World!");
-
 Trabajador t1 = new Trabajador();
 t1.Nombre = "Jose";
 t1.PrimerApe = "Garcia";
@@ -15,11 +13,29 @@ Trabajador t2 = new Trabajador();
 t2.Nombre = "Juan Carlos";
 t2.PrimerApe = "Garcia";
 t2.SegundoApe = "Roque";
+t1.FechaNacimiento = new DateTime(2000,03,11);
 t2.Sexo = 'H';
 
-MostrarTrabajador(t1);
+Trabajador t3 = new Trabajador();
+t3.Nombre = "Julia";
+t3.PrimerApe = "Hernandez";
+t3.SegundoApe = "Silva";
+t3.FechaNacimiento = new DateTime(1995,10,17);
+t3.Sexo = 'M';
 
-void MostrarTrabajador(Trabajador trabajador)
+MostrarTrabajador(t1);
+MostrarTrabajador(t2);
+MostrarTrabajador(t3);
+
+List<Trabajador> trabajadores = new List<Trabajador>();
+trabajadores.Add(t1);
+trabajadores.Add(t2);
+trabajadores.Add(t3);
+Console.WriteLine($"Trabajadores en la lista: {trabajadores.Count}");
+Console.WriteLine("========================================");
+MostrarTrabajador(trabajadores[1]);
+
+static void MostrarTrabajador(Trabajador trabajador)
 {
-    Console.WriteLine($"{t1.Nombre} {t1.PrimerApe} {t1.SegundoApe} {t1.FechaNacimiento.ToShortDateString()}");
+    Console.WriteLine($"{trabajador.Nombre} {trabajador.PrimerApe} {trabajador.SegundoApe} {trabajador.Sexo} ==> {trabajador.FechaNacimiento.ToShortDateString()} ");
 }
