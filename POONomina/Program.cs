@@ -10,7 +10,7 @@ t1.FechaNacimiento = new DateTime(1981,05,26);
 t1.Sexo = 'H';
 
 Trabajador t2 = new Trabajador();
-t2.Nombre = "Juan Carlos";
+t2.Nombre = "Carlos";
 t2.PrimerApe = "Garcia";
 t2.SegundoApe = "Roque";
 t1.FechaNacimiento = new DateTime(2000,03,11);
@@ -37,5 +37,5 @@ MostrarTrabajador(trabajadores[1]);
 
 static void MostrarTrabajador(Trabajador trabajador)
 {
-    Console.WriteLine($"{trabajador.Nombre} {trabajador.PrimerApe} {trabajador.SegundoApe} {trabajador.Sexo} ==> {trabajador.FechaNacimiento.ToShortDateString()} ");
+    Console.WriteLine($"{trabajador.Nombre} {trabajador.PrimerApe} {trabajador.SegundoApe}\t {trabajador.Sexo}\t {trabajador.FechaNacimiento.ToShortDateString()} ");
 }
