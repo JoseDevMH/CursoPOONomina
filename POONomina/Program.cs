@@ -30,21 +30,17 @@ t4.SegundoApe = "Lavou";
 t4.FechaNacimiento = new DateTime(1978,09,28);
 t4.Sexo = 'M';
 
-MostrarTrabajador(t1);
-MostrarTrabajador(t2);
-MostrarTrabajador(t3);
+t1.MostrarDatos();
+t2.MostrarDatos();
+t3.MostrarDatos();
 
 List<Trabajador> trabajadores = new List<Trabajador>();
 trabajadores.Add(t1);
 trabajadores.Add(t2);
 trabajadores.Add(t3);
 trabajadores.Add(t4);
+Console.WriteLine("================================================");
 Console.WriteLine($"Trabajadores en la lista: {trabajadores.Count}");
-Console.WriteLine("========================================");
-MostrarTrabajador(trabajadores[1]);
-t4.MostrarDatos();
+Console.WriteLine("================================================");
 
-static void MostrarTrabajador(Trabajador trabajador)
-{
-    Console.WriteLine($"{trabajador.Nombre} {trabajador.PrimerApe} {trabajador.SegundoApe}\t {trabajador.Sexo}\t {trabajador.FechaNacimiento.ToShortDateString()} ");
-}
+t4.MostrarDatos();
