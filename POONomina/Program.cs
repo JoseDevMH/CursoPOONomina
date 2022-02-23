@@ -30,9 +30,6 @@ t4.SegundoApe = "Lavou";
 t4.FechaNacimiento = new DateTime(1978,09,28);
 t4.Sexo = 'M';
 
-t1.MostrarDatos();
-t2.MostrarDatos();
-t3.MostrarDatos();
 
 List<Trabajador> trabajadores = new List<Trabajador>();
 trabajadores.Add(t1);
@@ -43,4 +40,7 @@ Console.WriteLine("================================================");
 Console.WriteLine($"Trabajadores en la lista: {trabajadores.Count}");
 Console.WriteLine("================================================");
 
-t4.MostrarDatos();
+foreach (Trabajador item in trabajadores)
+{
+    item.MostrarDatos();
+}
