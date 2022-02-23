@@ -23,6 +23,13 @@ t3.SegundoApe = "Silva";
 t3.FechaNacimiento = new DateTime(1995,10,17);
 t3.Sexo = 'M';
 
+Trabajador t4= new Trabajador();
+t4.Nombre = "Sofia";
+t4.PrimerApe = "Perez";
+t4.SegundoApe = "Lavou";
+t4.FechaNacimiento = new DateTime(1978,09,28);
+t4.Sexo = 'M';
+
 MostrarTrabajador(t1);
 MostrarTrabajador(t2);
 MostrarTrabajador(t3);
@@ -31,9 +38,11 @@ List<Trabajador> trabajadores = new List<Trabajador>();
 trabajadores.Add(t1);
 trabajadores.Add(t2);
 trabajadores.Add(t3);
+trabajadores.Add(t4);
 Console.WriteLine($"Trabajadores en la lista: {trabajadores.Count}");
 Console.WriteLine("========================================");
 MostrarTrabajador(trabajadores[1]);
+t4.MostrarDatos();
 
 static void MostrarTrabajador(Trabajador trabajador)
 {
