@@ -44,3 +44,8 @@ foreach (Trabajador item in trabajadores)
 {
     item.MostrarDatos();
 }
+
+Nomina nomina = new Nomina();
+Console.WriteLine("-----------------------------------------------");
+Console.WriteLine($"Total de la nomina: {nomina.TotalDeNomina()}");
+Console.WriteLine("-----------------------------------------------");
