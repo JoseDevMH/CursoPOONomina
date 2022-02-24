@@ -7,6 +7,14 @@ namespace POONomina
         public DateTime FechaNacimiento { get; set; }
         public char  Sexo { get; set; }
 
+        public Trabajador(string nombre, string primerApellido, string segundoApellido, DateTime fechaDeNacimiento, Char sexo){
+            this.Nombre = nombre;
+            this.PrimerApe = primerApellido;
+            this.SegundoApe = segundoApellido;
+            this.FechaNacimiento = fechaDeNacimiento;
+            this.Sexo = sexo;
+        }
+
         public Trabajador(){
             Console.Write("Nombre: ");
             this.Nombre=Console.ReadLine();
