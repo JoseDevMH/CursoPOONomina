@@ -1,6 +1,7 @@
 namespace POONomina {
     public class Generadora {
         Random r;
+        List<Empleo> Empleos {get; set;}
         public Generadora(int numEmpleados, int numPuestos, int numEmpleos)
         {
             r = new Random();
@@ -34,7 +35,11 @@ namespace POONomina {
                 puestos.Add(new PuestoLaboral(r));
             }
 
-            
+            Empleos = new List<Empleo>();
+            for (int i = 0; i < numEmpleos; i++)
+            {
+                Empleos.Add(new Empleo(trabajadores[r.Next(0,trabajadores.Count-1)], puestos[r.Next(0, puestos.Count-1)], r));
+            }
 
         }
         private char SexoAleatorio()
