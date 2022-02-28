@@ -24,3 +24,15 @@ foreach (Nomina item in nominas)
 {
     Console.WriteLine($"{j++}\t {item.Fecha.ToShortDateString()}\t $ {item.TotalDeNomina()}");
 }
+
+Console.WriteLine("-----------------------------------------------------");
+Console.WriteLine($"MEDIA: $ {ObtenerMedia(nominas)}");
+Console.WriteLine($"PROMEDIO: $ {nominas.Average(n=>n.TotalDeNomina())}");
+Console.WriteLine($"SUMA DE LAS NOMINAS: $ {nominas.Sum(n=>n.TotalDeNomina())}");
+Console.WriteLine("-----------------------------------------------------");
+
+static float ObtenerMedia(List<Nomina> nominas){
+    float max = nominas.Max(n=>n.TotalDeNomina());
+    float min = nominas.Min(n=>n.TotalDeNomina());;
+    return ((max - min) / 2) + min;
+}
