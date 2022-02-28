@@ -1,2 +1,3 @@
 # Cursos de C#
-En este curso se práctica programación orientada a objetos con c#, mediante un proyecto de consola POONomina
+- POONomina es un proyecto de consola con net 6 para practicar la programación orientada a objetos con C#
+
