@@ -5,7 +5,9 @@ using POONomina;
 
 //Generar 20 nominas de forma aleatoria
 List<Nomina> nominas = new List<Nomina>();
-for (int i = 0; i < 20; i++)
+Console.WriteLine("Número de nominas que desea genrear: ");
+int numNominas = int.Parse(Console.ReadLine());
+for (int i = 0; i < numNominas; i++)
 {
     Nomina nomina = new Nomina();
     Generadora generadora = new Generadora(20,10,15);
