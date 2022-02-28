@@ -11,6 +11,13 @@ namespace POONomina {
             nombres.Add("HEBER");
             nombres.Add("MATIAS");
             nombres.Add("EMMANUEL");
+            nombres.Add("RAMON");
+            nombres.Add("DANIEL");
+            nombres.Add("THALIA");
+            nombres.Add("YURI");
+            nombres.Add("CARMEN");
+            nombres.Add("DUILIO");
+            nombres.Add("FELIPE");
 
             List<string> apellidos = new List<string>();
             apellidos.Add("GARCIA");
@@ -22,6 +29,10 @@ namespace POONomina {
             apellidos.Add("RANGEL");
             apellidos.Add("CHIQUITO");
             apellidos.Add("PEREZ");
+            apellidos.Add("LOPEZ");
+            apellidos.Add("RAMIREZ");
+            apellidos.Add("IBARRA");
+            apellidos.Add("MARTINEZ");
 
             List<Trabajador> trabajadores = new List<Trabajador>();
             for (int i = 0; i < numEmpleados; i++)

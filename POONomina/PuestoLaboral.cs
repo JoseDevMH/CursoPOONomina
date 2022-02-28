@@ -17,6 +17,9 @@ namespace POONomina
         puestos.Add("Auxiliar");
         puestos.Add("Ayudante");
         puestos.Add("Obrero(a)");
+        puestos.Add("Coodinador");
+        puestos.Add("Enfermero");
+        puestos.Add("Director");
 
         //Asignar los datos a las propiedades del constructor de forma aleatoria
         Nombre = puestos[r.Next(0, puestos.Count-1)];
