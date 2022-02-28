@@ -1,7 +1,7 @@
 namespace POONomina {
     public class Generadora {
         Random r;
-        List<Empleo> Empleos {get; set;}
+        public List<Empleo> Empleos {get; set;}
         public Generadora(int numEmpleados, int numPuestos, int numEmpleos)
         {
             r = new Random();

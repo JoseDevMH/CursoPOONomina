@@ -2,34 +2,16 @@
 
 using POONomina;
 
-Random r = new Random();
-List<Trabajador> trabajadores = new List<Trabajador>();
-Trabajador t1 = new Trabajador();
-Trabajador t2 = new Trabajador();
 
-trabajadores.Add(t1);
-trabajadores.Add(t2);
-
-for (int i = 0; i < 2; i++)
+//Generar 20 nominas de forma aleatoria
+List<Nomina> nominas = new List<Nomina>();
+for (int i = 0; i < 20; i++)
 {
-    trabajadores.Add(new Trabajador());
+    Nomina nomina = new Nomina();
+    Generadora generadora = new Generadora(20,10,15);
+    nomina.Empleos = generadora.Empleos;
+    DateTime FechaActual = DateTime.Now;
+    nomina.Fecha = FechaActual.AddDays(1*7);
+    nominas.Add(nomina);
 }
 
-Console.WriteLine("\n\n DATOS DE LOS TRABAJADORES");
-
-foreach (Trabajador item in trabajadores)
-{
-    item.MostrarDatos();
-}
-
-List<PuestoLaboral> puestos = new List<PuestoLaboral>();
-
-for (int i = 0; i < 4; i++)
-{
-    puestos.Add(new PuestoLaboral(r));
-}
-
-foreach (PuestoLaboral item in puestos)
-{
-    Console.WriteLine(item.DescribirPuesto());
-}
