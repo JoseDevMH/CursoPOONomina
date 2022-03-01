@@ -3,7 +3,10 @@ using Fundamentos.Models;
 
 Bebida bebida = new Bebida("Coca Cola", 355);
 bebida.Beberse(125);
+Console.WriteLine(bebida.Nombre);
 Console.WriteLine(bebida.Cantidad);
 
-Cerveza cerveza = new Cerveza("Indio", 200);
+Cerveza cerveza = new Cerveza();
 cerveza.Beberse(50);
+Console.WriteLine(cerveza.Nombre);
+Console.WriteLine(cerveza.Cantidad);
